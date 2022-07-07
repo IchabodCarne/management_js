@@ -4,10 +4,14 @@ import path from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 
+import RunSQL from './common/util'
+
 import indexRouter from './routes/index'
 import userRouter from './routes/user'
 
 const app = express()
+
+app.locals.RunSQL = RunSQL
 
 // view engine setup
 app.set('views', path.join(__dirname, '../views'))
