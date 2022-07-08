@@ -1,7 +1,7 @@
 const addUser = (id, name, account, password, role, group, avatar) => {
-  return `INSERT INTO usert_t ( id, NAME, account, password, role, group, avatar )
+  return `INSERT INTO mysql.user_t ( id, name, account, password, role, group, avatar )
   VALUES
-    (${id}, ${name}, ${account}, ${password}, ${role}, ${group}, ${avatar});`
+    (${id}, '${name}', '${account}', '${password}', '${role}', '${group}', ${avatar});`
 }
 
 const queryUserByAct = (account) => {
