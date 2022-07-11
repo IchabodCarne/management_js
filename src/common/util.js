@@ -10,4 +10,4 @@ async function RunSQL(sql) {
   })
 }
 
-export default RunSQL
+export { RunSQL }
